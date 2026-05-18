@@ -55,7 +55,8 @@ export const CartProvider = ({ children }) => { // Se crea un componente proveed
     }
 
     const totalCarro = () => { // Función para calcular el total del carrito, sumando el precio de cada producto multiplicado por su cantidad.
-        const total = cart.reduce((acumulador, item) => acumulador + item.price * item.quantity, 0);
+        console.log("cart para calcular total:", cart);
+        const total = cart.reduce((acumulador, item) => acumulador + item.precio * item.quantity, 0);
         return total; // Devuelve el total calculado del carrito.
     }
 

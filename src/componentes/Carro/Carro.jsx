@@ -14,12 +14,11 @@ export const Cart = () => {
             <ul className="cart-list">
                 {cart.map((item) => (
                     <li key={item.id} className="cart-item">
-                        <span>{item.title}</span>
-                        <span>Cantidad: {item.quantity}</span>
-                        <span>${item.price * item.quantity}</span>
+                        <span>{item.nombre}</span>
                         <button onClick={() => restarDelCarro(item.id)}>➖</button>
                         <span>{item.quantity}</span>
                         <button onClick={() => eliminarDelCarro(item.id)}>❌</button>
+                        <span>${item.precio * item.quantity}</span>
                     </li>
                 ))}
             </ul>
