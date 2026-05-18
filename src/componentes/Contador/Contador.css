@@ -1,0 +1,14 @@
+/* .count-container {
+    margin: 2 rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2 rem;
+} */
+
+.count-container {
+    margin: 2rem;
+    display: flex;
+    gap: 2rem;
+}

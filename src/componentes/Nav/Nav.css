@@ -1,0 +1,29 @@
+.nav-list {
+    background-color: #444242;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cart-count {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}

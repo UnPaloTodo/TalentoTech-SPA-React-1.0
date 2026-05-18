@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "imagen": "/img/cereza.jpg",
+        "nombre": "Cereza",
+        "descripción": "Color rojo intenso, jugosa y dulce, ideal para postres o consumo fresco.",
+        "precio": 250
+    },
+    {
+        "id": 2,
+        "imagen": "/img/ananá.jpg",
+        "nombre": "Ananá",
+        "descripción": "Pulpa amarilla, sabor dulce y ligeramente ácido, refrescante y rica en vitamina C.",
+        "precio": 300
+    },
+    {
+        "id": 3,
+        "imagen": "/img/banana.jpg",
+        "nombre": "Banana",
+        "descripción": "Cáscara amarilla, pulpa suave y dulce, rica en potasio.",
+        "precio": 180
+    },
+    {
+        "id": 4,
+        "imagen": "/img/durazno.jpg",
+        "nombre": "Durazno",
+        "descripción": "Aterciopelada, pulpa jugosa y dulce con un toque ácido.",
+        "precio": 220
+    },
+    {
+        "id": 5,
+        "imagen": "/img/frutilla.jpg",
+        "nombre": "Frutilla",
+        "descripción": "Roja brillante, dulce y aromática, muy utilizada en postres.",
+        "precio": 270
+    },
+    {
+        "id": 6,
+        "imagen": "/img/limón.jpg",
+        "nombre": "Limón",
+        "descripción": "De sabor ácido, ideal para bebidas, comidas y aderezos.",
+        "precio": 150
+    },
+    {
+        "id": 7,
+        "imagen": "/img/manzana.jpg",
+        "nombre": "Manzana",
+        "descripción": "Crujiente y jugosa, de sabor dulce o ligeramente ácido.",
+        "precio": 200
+    },
+    {
+        "id": 8,
+        "imagen": "/img/mora.jpg",
+        "nombre": "Mora",
+        "descripción": "Pequeña de color oscuro, sabor dulce con notas ácidas.",
+        "precio": 320
+    },
+    {
+        "id": 9,
+        "imagen": "/img/uva.jpg",
+        "nombre": "Uva",
+        "descripción": "Jugosa y dulce, disponible en variedades verdes y moradas.",
+        "precio": 260
+    },
+    {
+        "id": 10,
+        "imagen": "/img/naranja.jpg",
+        "nombre": "Naranja",
+        "descripción": "Refrescante, rica en vitamina C.",
+        "precio": 190
+    },
+    {
+        "id": 11,
+        "imagen": "/img/pera.jpg",
+        "nombre": "Pera",
+        "descripción": "Pulpa suave y jugosa, sabor dulce y delicado.",
+        "precio": 230
+    },
+    {
+        "id": 12,
+        "imagen": "/img/mandarina.jpg",
+        "nombre": "Mandarina",
+        "descripción": "Dulce y ácida, la reina del invierno.",
+        "precio": 200
+    }
+
+]
