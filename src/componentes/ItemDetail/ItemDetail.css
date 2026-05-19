@@ -1,0 +1,37 @@
+/* .btn-volver {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #8b4a4a;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+} */
+
+.btn-volver {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #8b4a4a;
+    color: white;
+    border-radius: 25px;        /* más alto = más redondeado, 50px = píldora */
+    text-decoration: none;
+    border: 2px solid #8b4a4a;  /* borde del mismo color o distinto */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;        /* espaciado entre letras */
+    transition: all 0.3s ease;  /* animación suave al hover */
+    justify-content: center;     /* centra el texto dentro del botón */
+    gap: 10px;               /* espacio entre botones */
+}
+
+.btn-volver:hover {
+    background-color: transparent;  /* efecto fantasma al pasar el mouse */
+    color: #8b4a4a;
+}
+
+/* parámetros clave para probar:
+
+border-radius — de 4px (cuadrado) a 50px (píldora)
+transition + :hover — para darle "vida" al botón
+letter-spacing — separa las letras para look más elegante
+border — permite el efecto "fantasma" en hover */
