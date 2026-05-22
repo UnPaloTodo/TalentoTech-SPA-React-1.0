@@ -3,7 +3,7 @@ import "./Carro.css";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
-    const { cart, totalCarro, eliminarDelCarro, restarDelCarro, vaciarCarro, checkOut } = useCart(); // Se utiliza el hook useCart para acceder al estado del carrito y a las funciones relacionadas con el carrito, como eliminar productos, vaciar el carrito y finalizar la compra.
+    const { cart, totalCarro, eliminarDelCarro, agregarAlCarro, restarDelCarro, vaciarCarro, checkOut } = useCart(); // Se utiliza el hook useCart para acceder al estado del carrito y a las funciones relacionadas con el carrito, como eliminar productos, vaciar el carrito y finalizar la compra.
 
     if (cart.length === 0) { // Si el carrito está vacío (es decir, si la longitud del array cart es 0), se muestra un mensaje indicando que el carrito está vacío.
         return (
@@ -13,7 +13,7 @@ export const Cart = () => {
         )
     }
 
-    return (
+    return ( // Si el carrito no está vacío, se muestra la lista de productos en el carrito, junto con botones para eliminar productos, restar cantidad, vaciar el carrito y finalizar la compra. También se muestra el total del carrito.
         <div className="cart">
             <h2>Tu carrito</h2>
             <ul className="cart-list">
@@ -22,6 +22,7 @@ export const Cart = () => {
                         <span>{item.nombre}</span>
                         <button onClick={() => restarDelCarro(item.id)}>➖</button>
                         <span>{item.quantity}</span>
+                        <button onClick={() => agregarAlCarro({ ...item, quantity: 1 })}>➕</button>
                         <button onClick={() => eliminarDelCarro(item.id)}>❌</button>
                         <span>${item.precio * item.quantity}</span>
                     </li>
