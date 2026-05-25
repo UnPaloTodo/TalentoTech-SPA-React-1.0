@@ -32,3 +32,5 @@ export const ItemDetailContainer = () => { // Se define el componente ItemDetail
         </section>
     )
 }
+
+//los contenedores son componentes que se encargan de manejar la lógica y el estado de la aplicación, mientras que los componentes de presentación se encargan de mostrar la interfaz de usuario. En este caso, ItemDetailContainer es un contenedor que maneja la lógica para obtener los detalles del producto y pasar esa información al componente de presentación ItemDetail, que se encarga de mostrar esos detalles al usuario.

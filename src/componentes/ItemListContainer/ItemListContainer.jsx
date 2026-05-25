@@ -45,3 +45,5 @@ export const ItemListContainer = () => {
     );
 
 }
+
+// los contenedores son componentes que se encargan de manejar la lógica y el estado de la aplicación, mientras que los componentes de presentación se encargan de mostrar la interfaz de usuario. En este caso, ItemListContainer es un contenedor que maneja la lógica para obtener la lista de productos y pasar esa información al componente de presentación ItemList, que se encarga de mostrar esos productos al usuario.
