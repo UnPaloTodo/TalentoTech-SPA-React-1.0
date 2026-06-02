@@ -17,6 +17,14 @@ export const Nav = () => {
                     <Link to={"/"}>Home 🏠</Link>
                 </li>
                 <li>
+                    <Link to={"/categoria/frutas-dulces"}>Frutas dulces</Link>
+                    <Link to={"/categoria/frutas-acidas"}>Frutas ácidas</Link>
+                    <Link to={"/categoria/frutas-semi-acidas"}>Frutas semi ácidas</Link>
+                </li>
+                <li>
+                    <Link to={"/contador"}>Contador</Link>
+                </li>
+                <li>
                     <Link to={"/carrito"}>Carro de Compras 🛒
                         {totalItems > 0 && <span className="cart-count">{totalItems}</span>} {/* Si el total del carrito es mayor que cero, se muestra un contador con la cantidad de productos en el carrito. */}
                     </Link>

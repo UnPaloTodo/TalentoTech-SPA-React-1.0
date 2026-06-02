@@ -4,11 +4,13 @@ import { Footer } from "./componentes/Footer/Footer";
 import { ItemListContainer } from "./componentes/ItemListContainer/ItemListContainer";
 import { Route, Routes } from "react-router-dom";
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer";
-import {Contador} from "./componentes/Contador/Contador";
-import "./App.css";
+import { Contador } from "./componentes/Contador/Contador";
 import { Cart } from "./componentes/Carro/Carro";
+import "./App.css";
 
-function App() {"todo lo que se monta en App.jsx (dentro de return) se va a mostrar en la página"
+
+function App() {
+    "todo lo que se monta en App.jsx (dentro de return) se va a mostrar en la página"
 
     return (
         <>
@@ -16,8 +18,9 @@ function App() {"todo lo que se monta en App.jsx (dentro de return) se va a most
             <main>
                 <Routes>
                     <Route path="/" element={<ItemListContainer />} />
+                    <Route path="/categoria/:categoria" element={<ItemListContainer />} />
                     <Route path="/producto/:id" element={<ItemDetailContainer />} />
-                    <Route path="/carrito" element={ <Cart/> } />
+                    <Route path="/carrito" element={<Cart />} />
                 </Routes>
             </main>
             <Footer />
