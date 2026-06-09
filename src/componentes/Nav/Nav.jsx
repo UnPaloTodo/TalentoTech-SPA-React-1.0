@@ -17,7 +17,7 @@ export const Nav = () => {
                     <Link to={"/"}>Home 🏠</Link>
                 </li>
                 <li>
-                    <Link to={"/categoria/frutas-dulces"}>Frutas dulces</Link>
+                    <Link to={"/categoria/frutas-dulces"}>Frutas dulces</Link> 
                     <Link to={"/categoria/frutas-acidas"}>Frutas ácidas</Link>
                     <Link to={"/categoria/frutas-semi-acidas"}>Frutas semi ácidas</Link>
                 </li>
