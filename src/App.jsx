@@ -7,6 +7,8 @@ import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetai
 import { Contador } from "./componentes/Contador/Contador";
 import { Cart } from "./componentes/Carro/Carro";
 import "./App.css";
+import { ProductoFormContainer } from "./componentes/adminComps/productoFormContainer";
+import { ProductoSuceso } from "./componentes/adminComps/productoSuceso";
 
 
 function App() {
@@ -17,10 +19,12 @@ function App() {
             <Header />
             <main>
                 <Routes>
-                    <Route path="/" element={<ItemListContainer />} />
+                    <Route path="/" element={<ItemListContainer />} /> {/* Se define la ruta raíz "/" para mostrar el componente ItemListContainer. Como Route no tiene nada que "envolver"-a diferencia de Routes-, se usa autocierre. Ruta pública.*/}
                     <Route path="/categoria/:categoria" element={<ItemListContainer />} />
                     <Route path="/producto/:id" element={<ItemDetailContainer />} />
                     <Route path="/carrito" element={<Cart />} />
+                    <Route path="/admin" element={<ProductoFormContainer />} />  {/* Se define la ruta "/admin" para mostrar el componente ProductoFormContainer. Ruta privada. */}
+                    <Route path="/suceso/:id" element={<ProductoSuceso />} /> {/* Se define la ruta "/suceso/:id" para mostrar el componente ProductoSuceso. Ruta privada. */}
                 </Routes>
             </main>
             <Footer />

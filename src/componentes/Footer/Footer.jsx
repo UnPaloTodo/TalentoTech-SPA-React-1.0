@@ -4,7 +4,7 @@ import "./Footer.css" // "así se importa el css del footer; se puede importar c
 export const Footer = () => {
     return (
         <footer>
-            <p>Powered by Tincho</p>
+            <p>Powered by Talento Tech</p>
             <nav>
                 <ul className="nav-list">
                     <li>Wasap</li>
