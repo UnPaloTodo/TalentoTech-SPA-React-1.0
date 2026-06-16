@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Item } from "../Item/Item"
 import { Contador } from "../Contador/Contador"
 import "./ItemDetail.css"
-import { useCart } from "../../contexto/CartContext.jsx";
+import { useCart } from "../../contexto/CartContexto.jsx";
 import { Link } from "react-router-dom";
 
 export const ItemDetail = ({ item }) => { // El componente ItemDetail recibe un objeto item como prop, que contiene la información del producto a mostrar en el detalle. Se utiliza el hook useState para manejar la cantidad seleccionada por el usuario, y se importa la función agregarAlCarro desde el contexto del carrito para permitir agregar el producto al carrito con la cantidad seleccionada.

@@ -1,14 +1,13 @@
-
-import { Header } from "./componentes/Header/Header";
-import { Footer } from "./componentes/Footer/Footer";
 import { ItemListContainer } from "./componentes/ItemListContainer/ItemListContainer";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { ItemDetailContainer } from "./componentes/ItemDetailContainer/ItemDetailContainer";
-import { Contador } from "./componentes/Contador/Contador";
 import { Cart } from "./componentes/Carro/Carro";
 import "./App.css";
 import { ProductoFormContainer } from "./componentes/adminComps/productoFormContainer";
 import { ProductoSuceso } from "./componentes/adminComps/productoSuceso";
+import { AdminLayOut } from "./componentes/Layouts/AdminLayOut";
+import { PublicLayOut } from "./componentes/Layouts/PublicLayOut";
+
 
 
 function App() {
@@ -16,18 +15,28 @@ function App() {
 
     return (
         <>
-            <Header />
-            <main>
-                <Routes>
+            <Routes>
+                {/*/**========================================================================
+                 *                          rutas públicas
+                 *========================================================================**/}
+                <Route element={<PublicLayOut />}> {/* Se define una ruta sin path que envuelve a otras rutas, lo que indica que estas rutas son públicas y se mostrarán dentro del componente PublicLayOut. */}
                     <Route path="/" element={<ItemListContainer />} /> {/* Se define la ruta raíz "/" para mostrar el componente ItemListContainer. Como Route no tiene nada que "envolver"-a diferencia de Routes-, se usa autocierre. Ruta pública.*/}
                     <Route path="/categoria/:categoria" element={<ItemListContainer />} />
                     <Route path="/producto/:id" element={<ItemDetailContainer />} />
                     <Route path="/carrito" element={<Cart />} />
-                    <Route path="/admin" element={<ProductoFormContainer />} />  {/* Se define la ruta "/admin" para mostrar el componente ProductoFormContainer. Ruta privada. */}
-                    <Route path="/suceso/:id" element={<ProductoSuceso />} /> {/* Se define la ruta "/suceso/:id" para mostrar el componente ProductoSuceso. Ruta privada. */}
-                </Routes>
-            </main>
-            <Footer />
+                </Route>
+                <Route path="/admin/login" element={<AdminLogin />} /> {/* Se define la ruta "/admin/login" para mostrar el componente AdminLogin. Ruta pública. */}
+                {/*/**========================================================================
+                 *                           admin
+                 *========================================================================**/}
+                <Route path="/admin" element={<AdminLayOut />}> {/* Se define la ruta "/admin" para mostrar el componente AdminLayOut. Esto indica que las rutas anidadas dentro de esta ruta son privadas y se mostrarán dentro del componente AdminLayOut. */}
+                    <Route index element={<Navigate to = { "dashboard" } />} />
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="producto/nuevo" element={<ProductoFormContainer />} />  {/* Se define la ruta "/admin" para mostrar el componente ProductoFormContainer. Ruta privada. */}
+                    <Route path="producto/suceso/:id" element={<ProductoSuceso />} /> {/* Se define la ruta "/suceso/:id" para mostrar el componente ProductoSuceso. Ruta privada. */}
+                </Route>
+            </Routes>
+
         </>
     )
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Nav.css"
-import { useCart } from "../../contexto/CartContext.jsx";
+import { useCart } from "../../contexto/CartContexto.jsx";
 
 export const Nav = () => {
 
@@ -20,9 +20,6 @@ export const Nav = () => {
                     <Link to={"/categoria/frutas-dulces"}>Frutas dulces</Link> 
                     <Link to={"/categoria/frutas-acidas"}>Frutas ácidas</Link>
                     <Link to={"/categoria/frutas-semi-acidas"}>Frutas semi ácidas</Link>
-                </li>
-                <li>
-                    <Link to={"/contador"}>Contador</Link>
                 </li>
                 <li>
                     <Link to={"/carrito"}>Carro de Compras 🛒

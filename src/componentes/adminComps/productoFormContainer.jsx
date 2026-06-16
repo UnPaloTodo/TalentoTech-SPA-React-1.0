@@ -52,11 +52,11 @@ export const ProductoFormContainer = () => {
 
             //armar el objeto del producto con la URL de la imagen obtenida
             const productoConImagen = { ...producto, 
-                price: Number (producto, precio), 
+                price: Number (producto.precio), 
                 imagen: imagenUrl } /* Se crea un nuevo objeto productoConImagen que combina los datos del producto con la URL de la imagen obtenida. Se utiliza el operador spread para mantener los valores anteriores del producto y se actualiza el campo precio convirtiéndolo a un número utilizando Number, y se agrega el campo imagen con la URL obtenida. */
 
             //alta del producto en la base de datos, incluyendo la URL de la imagen obtenida en el paso anterior
-            const idProducto = await agregarProductoProducto(productoConImagen) /* Se define una función asíncrona guardarProducto que se encargará de guardar el producto en la base de datos, incluyendo la URL de la imagen obtenida en el paso anterior. Se llama a esta función pasando el objeto productoConImagen y se espera su resultado utilizando await. El ID del producto guardado se almacena en la variable idProducto. */
+            const idProducto = await agregarProducto (productoConImagen) /* Se define una función asíncrona guardarProducto que se encargará de guardar el producto en la base de datos, incluyendo la URL de la imagen obtenida en el paso anterior. Se llama a esta función pasando el objeto productoConImagen y se espera su resultado utilizando await. El ID del producto guardado se almacena en la variable idProducto. */
 
             //vaciar el formulario y redirigir al usuario a la página de éxito o al listado de productos después de que el producto se haya guardado correctamente.
             setProducto({
@@ -73,13 +73,13 @@ export const ProductoFormContainer = () => {
         }}
 
 
-    return
+    return (
     <ProductoFormUI  /* Se retorna el componente ProductoFormUI, que es el componente de presentación que se encargará de mostrar el formulario al usuario. Este componente recibirá las props necesarias para manejar el estado y las acciones del formulario. */
         producto={producto} // estado
         errors={errors} // estado 
         loading={loading} // estado
         onChange={handleChange} /* Se pasa la función handleChange como prop onChange al componente ProductoFormUI. Esta función se encargará de actualizar el estado producto cada vez que el usuario ingrese datos en el formulario. Evento. Función.*/
-        onfileChange={handleFileChange} /* Se pasa la función handleFileChange como prop onfileChange al componente ProductoFormUI. Esta función se encargará de actualizar el estado file cada vez que el usuario seleccione un archivo de imagen. Evento. Función.*/
+        onFileChange={handleFileChange} /* Se pasa la función handleFileChange como prop onfileChange al componente ProductoFormUI. Esta función se encargará de actualizar el estado file cada vez que el usuario seleccione un archivo de imagen. Evento. Función.*/
         onSubmit={handleSubmit} /* Se pasa la función handleSubmit como prop onSubmit al componente ProductoFormUI. Esta función se encargará de manejar el envío del formulario, validar los datos ingresados y realizar las acciones necesarias para guardar el producto. Evento. Función.*/
-    />
+    />)
 }
