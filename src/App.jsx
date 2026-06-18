@@ -7,7 +7,9 @@ import { ProductoFormContainer } from "./componentes/adminComps/productoFormCont
 import { ProductoSuceso } from "./componentes/adminComps/productoSuceso";
 import { AdminLayOut } from "./componentes/Layouts/AdminLayOut";
 import { PublicLayOut } from "./componentes/Layouts/PublicLayOut";
-
+import { ProtectedRoute } from "./componentes/ProtectedRoute/ProtectedRoute";
+import { Login } from "./componentes/adminComps/Login";
+import { Dashboard } from "./componentes/adminComps/Dashboard";
 
 
 function App() {
@@ -25,11 +27,17 @@ function App() {
                     <Route path="/producto/:id" element={<ItemDetailContainer />} />
                     <Route path="/carrito" element={<Cart />} />
                 </Route>
-                <Route path="/admin/login" element={<AdminLogin />} /> {/* Se define la ruta "/admin/login" para mostrar el componente AdminLogin. Ruta pública. */}
+                {/*/**========================================================================
+                 *                          importa el componente login
+                 *========================================================================**/}
+                <Route path="/admin/login" element={<Login />} /> {/* Se define la ruta "/admin/login" para mostrar el componente AdminLogin. Ruta pública. */}
                 {/*/**========================================================================
                  *                           admin
                  *========================================================================**/}
-                <Route path="/admin" element={<AdminLayOut />}> {/* Se define la ruta "/admin" para mostrar el componente AdminLayOut. Esto indica que las rutas anidadas dentro de esta ruta son privadas y se mostrarán dentro del componente AdminLayOut. */}
+                <Route path="/admin" element={<ProtectedRoute>
+                    <AdminLayOut/>                    
+                    </ProtectedRoute>}>
+
                     <Route index element={<Navigate to = { "dashboard" } />} />
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="producto/nuevo" element={<ProductoFormContainer />} />  {/* Se define la ruta "/admin" para mostrar el componente ProductoFormContainer. Ruta privada. */}
