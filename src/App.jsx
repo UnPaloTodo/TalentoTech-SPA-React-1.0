@@ -8,8 +8,8 @@ import { ProductoSuceso } from "./componentes/adminComps/productoSuceso";
 import { AdminLayOut } from "./componentes/Layouts/AdminLayOut";
 import { PublicLayOut } from "./componentes/Layouts/PublicLayOut";
 import { ProtectedRoute } from "./componentes/ProtectedRoute/ProtectedRoute";
-import { Login } from "./componentes/adminComps/Login";
-import { Dashboard } from "./componentes/adminComps/Dashboard";
+import { Login } from "./componentes/Login/Login";
+import { Dashboard } from "./componentes/adminComps/Dashboard/DashBoard";
 
 
 function App() {

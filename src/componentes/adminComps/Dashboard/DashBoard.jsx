@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import {useAuth} from "../contexto/AuthContexto"
+import {useAuth} from "../../../contexto/AuthContexto"
 import "./Dashboard.css"
 
 
@@ -25,7 +25,7 @@ export const Dashboard = () => {
                 <h3>Acciones rápidas</h3>
 
                 <div className="actions-grid">
-                    <Link to="/admin/products/new" className="action-card">
+                    <Link to="/admin/producto/nuevo" className="action-card">
                         ➕ Cargar
                     </Link>
 

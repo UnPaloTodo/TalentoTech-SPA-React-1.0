@@ -18,7 +18,7 @@ export const validarProducto = (producto) => {
         error.descripcion = "La descripción del producto es obligatoria.";
     }
 
-    if (!producto.imagen || producto.imagen.trim() === "") {
+    if (!producto.file) {
         error.imagen = "La URL de la imagen del producto es obligatoria.";
     }
 

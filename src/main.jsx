@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { CartProvider } from './contexto/CartContexto.jsx';
 import { AuthProvider } from './contexto/AuthContexto.jsx';
-import { Dashboard } from "./componentes/adminComps/Dashboard";
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

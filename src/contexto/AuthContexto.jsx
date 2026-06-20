@@ -19,8 +19,8 @@ export const useAuth = () => { // Se exporta un hook personalizado -useAuth- que
 }
 
 export const AuthProvider = ({ children }) => { // Se crea un componente proveedor -AuthProvider- que envuelve a los componentes hijos-children y proporciona el estado de autenticación a través del contexto.
-    const { user, setUser } = useState(null); // Se utiliza el hook useState para crear un estado local -user- que representa al usuario autenticado, inicialmente establecido en null.
-    const { loading, setLoading } = useState(true); // Se utiliza el hook useState para crear un estado local -loading- que representa si la autenticación está en proceso, inicialmente establecido en true.
+    const [user, setUser] = useState(null); // Se utiliza el hook useState para crear un estado local -user- que representa al usuario autenticado, inicialmente establecido en null.
+    const [loading, setLoading ] = useState(true); // Se utiliza el hook useState para crear un estado local -loading- que representa si la autenticación está en proceso, inicialmente establecido en true.
 
     useEffect(() => { // Se utiliza el hook useEffect para realizar una acción secundaria después de que el componente se haya montado, en este caso, para verificar si el usuario ya está autenticado.
         const unSubscribe = onAuthStateChanged(auth, (firebaseuser) => { // Se utiliza la función onAuthStateChanged para escuchar los cambios en el estado de autenticación del usuario. Esta función recibe el objeto auth y una función de callback que se ejecuta cada vez que cambia el estado de autenticación.
