@@ -8,7 +8,7 @@ export const PublicLayOut = () => {
     <>
         <Header />
         <main>
-            <Outlet />
+            <Outlet /> {/* Se renderiza el componente Outlet dentro del componente PublicLayOut, lo que permite que cualquier componente dentro de este componente tenga acceso al estado de autenticación y a la función de carga de productos a través del contexto AuthContexto. */}
         </main>
         <Footer />
     </>

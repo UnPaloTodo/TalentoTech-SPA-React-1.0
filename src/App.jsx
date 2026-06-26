@@ -28,7 +28,7 @@ function App() {
                     <Route path="/carrito" element={<Cart />} />
                 </Route>
                 {/*/**========================================================================
-                 *                          importa el componente login
+                 *                          importación del componente login
                  *========================================================================**/}
                 <Route path="/admin/login" element={<Login />} /> {/* Se define la ruta "/admin/login" para mostrar el componente AdminLogin. Ruta pública. */}
                 {/*/**========================================================================

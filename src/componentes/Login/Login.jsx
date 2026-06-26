@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../contexto/AuthContexto"
 import "./Login.css"
+import { Link } from "react-router-dom"
 
 
 export const Login = () => {
@@ -30,6 +31,12 @@ export const Login = () => {
     }}
 
     return (
+        <div className="login-header">
+            <div className="header-actions">
+                    <Link className="btn primary" to="/"> {/*el <Link> no es un <button> sino un <a> que es un elemento de navegación que se puede utilizar para crear enlaces de navegación dentro de la aplicación. Se utiliza el atributo to para establecer la ruta a la que el enlace apunta.*/}
+                    Volver a la tienda
+                    </Link>
+            </div>
         <form onSubmit={handleSubmit} className="login-form">
             <h2>Iniciar Sesión</h2>
 
@@ -49,6 +56,10 @@ export const Login = () => {
                 onChange={handleChange} />
             </div>
             <button type="submit">Login</button>
-            </form> 
+            </form>
+            </div>
     ) 
 }
+
+/* admin@admin.com
+admin123 */
