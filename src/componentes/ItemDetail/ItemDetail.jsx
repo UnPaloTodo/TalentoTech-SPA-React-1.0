@@ -15,7 +15,7 @@ export const ItemDetail = ({ item }) => { // El componente ItemDetail recibe un 
 
     return (
         <Item {...item}>
-            <p>{item.descripción}</p>
+            <p>{item.descripcion}</p>
             <Contador cantidad={cantidad} setCantidad={setCantidad} />
             <button
                 className="btn primary"

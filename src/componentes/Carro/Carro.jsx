@@ -7,7 +7,8 @@ export const Cart = () => {
 
     if (cart.length === 0) { // Si el carrito está vacío (es decir, si la longitud del array cart es 0), se muestra un mensaje indicando que el carrito está vacío.
         return (
-            <div> <p>El carrito está vacío</p>
+            <div className="cart-vacio">
+                <p>El carrito está vacío</p>
                 <Link to="/" className="btn-volver">Ver Productos</Link>
             </div>
         )
@@ -29,8 +30,8 @@ export const Cart = () => {
                 ))}
             </ul>
             <p className="cart-total">Total: ${totalCarro()}</p>
-            <button onClick={vaciarCarro}>Vaciar carrito</button>
-            <button onClick={checkOut}>Finalizar compra</button>
+            <button className="btn-vaciar" onClick={vaciarCarro}>Vaciar carrito</button>
+            <button className="btn-checkout" onClick={checkOut}>Finalizar compra</button>
         </div>
     )
 }

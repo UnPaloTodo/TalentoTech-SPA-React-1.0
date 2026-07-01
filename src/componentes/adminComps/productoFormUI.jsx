@@ -47,7 +47,7 @@ onSubmit}) => {
                 <div>
                     <label>Descripción:</label>
                     <textarea 
-                        name="descripcion" 
+                        name="descripcion"
                         value={producto.descripcion} 
                         onChange={onChange} 
                     />
