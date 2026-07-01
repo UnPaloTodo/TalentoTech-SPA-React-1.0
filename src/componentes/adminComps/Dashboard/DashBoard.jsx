@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import {useAuth} from "../../../contexto/AuthContexto"
-import "./Dashboard.css"
+import "./DashBoard.css"
 
 
 export const Dashboard = () => {
